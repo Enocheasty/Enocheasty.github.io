@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Excel助手使用说明</title>
+    <style type="text/css">
+        .Heading {
+            font-family: 等线;
+            font-size: x-large;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px #f7b75e;
+        }
+
+        .bodytext {
+            font-family: 'Microsoft JhengHei', Arial, Helvetica, sans-serif;
+            font-size: large;
+            text-align: justify;
+            text-justify: inter-character;
+            line-height: 28px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .labels {
+            font-family: 黑体;
+            font-size: large;
+            font-weight: bold;
+            color: #0f77d0;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin: auto; vertical-align: middle; width: 900px">
+        <p class="Heading">
+            表格拆分与拼接功能
+        </p>
+
+        <p class="bodytext">
+            Excel助手Ribbon菜单中数据操作部分点击表格拆分拼接按钮即可调出如下操作界面：
+        </p>
+        <p class="bodytext">
+            表格的拆分与拼接功能适用于较规则记录的多行记录表格，需要将工作表拆分成多个表，或者需要将多个表的数据进行拼接的情形下使用。
+        </p>
+        <table style="width: 100%;">
+            <tr>
+                <td style="width: 300px">
+                    <img alt="" src="images/07001.png" /></td>
+                <td style="vertical-align: top">
+
+                    <p class="bodytext">
+                        <span class="labels">表格拆分 </span>可以将<strong>当前工作表</strong>的数据按照指定的规则进行拆分，拆分的数据将新建数据表存放。 该操作不改变当前数据表内容。
+                    </p>
+                    <p class="bodytext">
+                        拆分数据范围，需要选择整列的范围，相当于需要输出的字段。
+                    </p>
+                    <p class="bodytext">
+                        标题行，需要选择整行的范围（可以为多行），设定该值，则指示程序数据的起始的位置，如不设定，默认数据的起始位置为第一行。选择保留标题行，则输出的每个拆分表均包含该标题行。
+                    </p>
+                    <p class="bodytext">
+                        拆分条件，程序提供三种拆分方案，第一种方式为固定行数，如拆分的数据极具规律，则可以采用此方式。第二种方式为空行拆分（注意，空行指无数据的行，而不是空格，或者不显示但具有数值的行），多个空行将作为同一个空行处理，避免拆分出空白的表格。第三种方式为按照指定条件值进行拆分。
+                    </p>
+                    <p class="bodytext">
+                        第三种方式下，指定列（字段）的值作为拆分验证的条件，需要注意的是，指定列号为选定范围内的列序号，而不是Excel中的列序号。条件值可以是数字或者字符串，接受*,?作为通配符使用，使用通配符时，条件值识别为字符串。通配符*表示任意个字符，?表示一个字符，参考<a href="EADataFilter.html">数据筛选及替换功能</a>中关于通配符的说明。条件行可以保留或舍弃，如保留将随上一个分区。
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <p class="bodytext">
+            输出拆分出来的工作表时，可以在当前工作簿新建工作表，也可以新建一个工作簿存放所有的工作表。
+            输出的新建工作簿处于未保存状态，需要用户自行保存。
+        </p>
+        <p class="bodytext">
+            通过切换选项卡，可以转换到表格拼接功能。
+        </p>
+        <table style="width: 100%;">
+            <tr>
+                <td style="width: 300px">
+                    <img alt="" src="images/07002.png" /></td>
+                <td style="vertical-align: top">
+                    <p class="bodytext">
+                        <span class="labels">表格拼接 </span>表格拆分的逆向操作，可以将多个数据表或多个文件的数据表拼接到一个数据表中。
+                    </p>
+                    <p class="bodytext">
+                        拼接数据范围，需要选择整列的范围，相当于需要拼接的字段。 与拆分不同的是，拼接数据范围的选择可以在任意的工作表上进行选择，它指示的是对每个需要拼接的工作表中数据的相对位置。当前工作表如不在拼接工作表目标列表中，则不会读取当前工作表的数据内容，哪怕在此表上选择区域。
+                    </p>
+                    <p class="bodytext">
+                        标题行，需要选择整行的范围（可以为多行），设定该值，则指示程序数据的起始的位置，如不设定，默认数据的起始位置为第一行。选择保留标题行，拼接时也会将标题行拼接在内。 拼接表格标题行位置选择类似数据范围选择，具有选择仅指示位置，与操作所在的工作表无关的特点。
+                    </p>
+                    <p class="bodytext">
+                        通过工作表列表框的右键菜单可以选择添加、删除文件以及进行相关选择操作，只有被选定的工作表将进行拼接操作。
+                    </p>
+                    <p class="bodytext">
+                        输出方式可以选择拼接到当前工作表，或者在当前工作簿新建工作簿，也可以新建一个工作簿。 当选择拼接到当前工作表时，是否在工作表列表中选择该列表并不重要，即使选择也会自动忽略；如选择其他选项，则与当
+                    </p>
+
+                </td>
+            </tr>
+        </table>
+        <p class="bodytext">
+            前工作表无关，如当前工作表属于被拼接对象，则需要在列表中勾选该工作表。
+        </p>
+        <p class="bodytext">
+            选择拼接到当前工作表选项时，拼接起始列数与选择的列数相同，而新建工作表或工作簿时，拼接的起始列数为1。即选择拼接数据范围为C~D列，如果拼接到当前工作表，则数据仍在C~D列范围内拼接，如果新建工作表或工作簿，则数据拼接在A~B列，保证新表中不会出现空白列。</p>
+        <div style="border: medium solid #000080; width: 850px; margin: auto; padding: 20px;">
+            <p class="bodytext">
+                <span class="labels">注意：</span>
+            </p>
+            <p class="bodytext">
+                1. 表格拼接功能的默认所指定的工作表都具有一样的格式，每个表相同的字段位置在表中的位置都是一样的，这样拼接的结果才正确，否则即使执行完成，也可能造成数据混乱。
+            </p>
+            <p class="bodytext">
+                2. 该功能输出列（字段）不接受多个不连续的列（字段）选择。
+            </p>
+            <p class="bodytext">
+                3. 该功能输出列（字段）可以不为数据表的所有列（字段），这样输出时，可能存在如下问题：未选择列具有的数据行数大于选择列的数据行数，程序将以整个数据最大的行数判断数据范围，此时输出的数据范围可能存在空行，空表的情况。例如：A列具有100行数据（最大值），B~D列具有50行数据，如果只输出B~D列，按25行一个表格拆分，择依然会拆分出4张表格，后2张为空表格。</p>
+        </div>
+        <p class="bodytext">
+            <span class="auto-sytle2"><strong>示例一： </strong></span>固定行数拆分表格。
+        </p>
+        <img alt="" src="images/TableSplitFixlines.gif" width="900" />
+        <p class="bodytext">
+            <span class="auto-sytle2"><strong>示例二： </strong></span>通过空白行拆分表格。
+        </p>
+        <img alt="" src="images/TableSplitByBlankLine.gif" width="900" />
+        <p class="bodytext">
+            <span class="auto-sytle2"><strong>示例三： </strong></span>使用条件拆分表格。
+        </p>
+        <img alt="" src="images/TableSplitByCondition.gif" width="900" />
+        <p class="bodytext">
+            <span class="auto-sytle2"><strong>示例四： </strong></span>表格拼接，将当前工作簿的表格拼接到当前工作表。
+        </p>
+        <img alt="" src="images/TableMerge1.gif" width="900" />
+                <p class="bodytext">
+            <span class="auto-sytle2"><strong>示例五： </strong></span>表格拼接，将其他工作簿的表格拼接到当前工作簿新建工作表。
+        </p>
+        <img alt="" src="images/TableMerge2.gif" width="900" />
+        <p class="bodytext">
+            <a href="EAHelp.html">返回目录</a>
+        </p>
+    </div>
+</body>
+</html>
