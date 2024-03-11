@@ -74,16 +74,18 @@
         <p class="bodytext">
             Excel助手Ribbon菜单中数据操作部分点击文本筛选器按钮即可调出如下操作界面：
         </p>
+        <p class="bodytext">
+            该功能主要对文本类型的数据单元格进行操作，可用于从外界导入的各类繁杂的信息中提取所需的内容。本功能忽略所选范围内的非文本值数据。
+        </p>
+        <p class="bodytext">
+            主要操作包括<span class="labels"> 筛选 删除 替换 </span>三种，即将单元格文本内符合匹配规则的数据筛选或删除或进行替换，经过筛选、删除或者替换操作的新字符将替换原单元格的内容。
+        </p>
         <table style="width: 100%;">
             <tr>
                 <td style="width: 265px">
                     <img alt="" src="images/05001.png" /></td>
                 <td style="vertical-align: top">
                     <p class="bodytext">
-                        该功能主要对文本类型的数据单元格进行操作，可用于从外界导入的各类繁杂的信息中提取所需的内容。
-                        本功能忽略所选范围内的非文本值数据。</p>
-                    <p class="bodytext">
-                        主要操作包括<span class="labels"> 筛选 删除 替换 </span>三种，即将单元格文本内符合匹配规则的数据筛选或删除或进行替换，经过筛选、删除或者替换操作的新字符将替换原单元格的内容。
                         数据类型，即为匹配类型，主要规则如下：
                     </p>
                     <table style="border: thin solid #003366; width: 100%;" border="1">
@@ -92,24 +94,37 @@
                             <td class="auto-style1" style="vertical-align: top; text-align: left">指0~9这10个数字的任意组合</td>
                         </tr>
                         <tr>
-                            <td class="auto-style2" style="vertical-align: middle; text-align: center">文字</td>
-                            <td class="auto-style1" style="vertical-align: top; text-align: left">指A~Z，a~z以及所有的汉字的任意组合，不包括标点符号</td>
+                            <td class="auto-style2" style="vertical-align: middle; text-align: center">常用标点</td>
+                            <td class="auto-style1" style="vertical-align: top; text-align: left">指全角或半角的标点符号、括号，包括`~!@#$%^&amp;*()_+{}[]:;&quot;&#39;&lt;.,&gt;?/|\*等符号</td>
                         </tr>
                         <tr>
                             <td class="auto-style2" style="vertical-align: middle; text-align: center">汉字</td>
-                            <td class="auto-style1" style="vertical-align: top; text-align: left">仅指所有汉字的组合，不包括标点符号</td>
+                            <td class="auto-style1" style="vertical-align: top; text-align: left">指所有汉字的组合，Unicode编码4E00~9FFF，不含标点</td>
                         </tr>
                         <tr>
-                            <td class="auto-style2" style="vertical-align: middle; text-align: center">空字符</td>
-                            <td class="auto-style1" style="vertical-align: top; text-align: left">包括常规的空格及全角空格，以及UniCode编码0000-0020、007F-00A0这两段已定义但无显示的空字符</td>
+                            <td class="auto-style2" style="vertical-align: middle; text-align: center">英文字母<br />
+                                全角英文</td>
+                            <td class="auto-style1" style="vertical-align: top; text-align: left">指A~Z以及a~z的英文字符，全角类型的英文字母为Unicode编码为FF21~FF3A以及FF41~FF5A的字母</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style2" style="vertical-align: middle; text-align: center">希腊字母</td>
+                            <td class="auto-style1" style="vertical-align: top; text-align: left">小写的α~ω以及大写Α~Ω的希腊字符</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style2" style="vertical-align: middle; text-align: center">罗马数字</td>
+                            <td class="auto-style1" style="vertical-align: top; text-align: left">小写的i,v,x,l,c,d,m以及大写的Ⅰ,Ⅴ,Ⅹ,Ⅼ,Ⅽ,Ⅾ,Ⅿ</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style2" style="vertical-align: middle; text-align: center">特殊字符</td>
+                            <td class="auto-style1" style="vertical-align: top; text-align: left">包括带圈或括号的数字、制表符、方块图形、几何图形、杂项符号、印刷符号、数学运算符号等</td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style2" style="vertical-align: middle; text-align: center">空格/控制符</td>
+                            <td class="auto-style1" style="vertical-align: top; text-align: left">包括常规的空格及全角空格，以及UniCode编码中定义的控制类字符，显示为空格的这类字符。有些字符用于断行控制，如删除可能会影响断行控制</td>
                         </tr>
                         <tr>
                             <td class="auto-style2" style="vertical-align: middle; text-align: center">日期</td>
                             <td class="auto-style1" style="vertical-align: top; text-align: left">可识别的日期格式包括：YYYY年MM月DD日、YYYY/MM/DD、YYYY-MM-DD、YYYY.MM.DD四种类型的日期写法，其中年份必为4位，月，日均位1~2位。该识别不进行日期有效验证，即2020-2-30也将识别为日期</td>
-                        </tr>
-                        <tr>
-                            <td class="auto-style2" style="vertical-align: middle; text-align: center">英文字母</td>
-                            <td class="auto-style1" style="vertical-align: top; text-align: left">指A~Z，a~z的任意组合，不包括标点符号</td>
                         </tr>
                     </table>
                 </td>
